@@ -48,7 +48,6 @@ exports.getTemplateById = async (req, res, next) => {
       throw error;
     }
 
-    //https://demo.docusign.net/restapi/v2.1/accounts/b4095a6d-2619-46e7-8561-fc66b34e8780/templates/9079ac57-f0f8-450e-9998-7a74e6755de2/documents/1/tabs
     logger.info("Fetching template details", { templateId, account_id });
     const response = await axios.get(
       `${baseURI}/restapi/v2.1/accounts/${account_id}/templates/${templateId}/documents/1/tabs`,
